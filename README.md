@@ -44,6 +44,14 @@ This repository demonstrates:
 
 ---
 
+## Paper Draft
+
+A working preprint of the associated research paper is included in this repository.
+The manuscript is derived from an MSc dissertation and is currently being revised for
+submission to an IEEE journal.
+
+The preprint is provided for transparency and research dissemination.
+
 ## Repository Structure
 
 ```text
