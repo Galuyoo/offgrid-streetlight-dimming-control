@@ -1,113 +1,59 @@
-# 🌞🔋 AI-Powered Optimization & LLM Fault Detection in Smart Solar Lighting Systems
+# Adaptive, Uncertainty-Aware Dimming Control for Off-Grid Solar Lighting
 
+## Overview
 
-> MSc Artificial Intelligence Dissertation  
-> Birmingham City University  
-> Author: Salaheddine Chouikh  
-> Academic Supervisor: Dr. 
-> Industry Partner: Agamine Solar
-> Industry Supervisor: Dr. Khalid Cherifi
----
+This repository presents a **forecast-guided, uncertainty-aware dimming control pipeline** for **off-grid solar-powered street lighting systems**.  
+The work addresses a central challenge in autonomous public lighting: **maximising energy savings while avoiding night-time blackouts under uncertain battery conditions**.
 
-## 🔍 Project Overview
+The proposed system combines:
+- Machine-learning–based **battery runtime forecasting**
+- **Conformal uncertainty calibration**
+- **Blackout-rate–aware control policies**
+- **Realistic actuation constraints** (ramp limits and hysteresis)
 
-This research explores the integration of AI in solar-powered smart lighting systems, in collaboration with Agamine Solar.  
-The aim is to develop a dual-model architecture that enables:
-
-1. **LLM-Powered Troubleshooting Assistant**  
-   - Natural language query interface for LED performance logs  
-   - Historical data analysis and fault explanation  
-   - Custom-trained model using real pole sensor data
-
-2. **Predictive Dimming Optimization**  
-   - Energy-aware dimming adjustments based on battery health and predicted charge  
-   - Simulation of multiple dimming scenarios using real field data  
-   - Deep learning and/or reinforcement learning strategies under consideration
+The pipeline is designed as a **research demonstrator with direct industrial relevance**, validated under deployment-like, time-aware evaluation protocols.
 
 ---
 
-## 📊 Dataset
+## Motivation
 
-- Source: Agamine Solar’s smart controller logs (live + historical)
-- Poles: 5 real-world installations + 2 simulation-ready test units
-- Format: `.csv` logs containing battery %, dimming %, temperature, charge/discharge rate, etc.
-- Logging frequency: Configurable (10–15 min intervals)
+Off-grid solar lighting systems operate under:
+- Finite and degrading battery capacity
+- Highly variable environmental conditions
+- Strict service reliability requirements (blackouts are unacceptable)
 
----
-
-## 🧪 Experiments
-
-### 🔋 Battery Health Evaluation
-- Develop a discharge-based health metric  
-- Compare battery performance across poles and dimming levels
-
-### 💡 Dimming Trials
-- Assign fixed dimming levels to test poles (60–100%)  
-- Monitor overnight battery depletion and system uptime
-
-### ⚠️ Fault Simulations
-- Manual fault injections (e.g. cable unplugging, shading)  
-- Used to train the LLM and anomaly detection systems
+Conventional rule-based dimming strategies are either overly conservative or unsafe.  
+This work demonstrates how **calibrated uncertainty** can be translated into **safe, adaptive control decisions**, enabling significant energy savings without violating reliability constraints.
 
 ---
 
-## 🧰 Codebase Structure
+## Key Contributions
 
-```
-Agamine Solar RESEARCH/
-├── Code/
-│   ├── serial_data_logger.py         # Real-time serial logger with auto-versioning
-│   ├── history/                      # Script version backups
-│   └── ...
+This repository demonstrates:
+
+- **Rolling-window ML forecasting** of battery runtime from per-cycle voltage, current, and temperature features  
+- **Uncertainty-aware control** using conformal residual quantiles as safety buffers  
+- **Blackout-rate budgeting**, allowing operators to specify acceptable risk levels (e.g. ≤5%)  
+- **Multiple control policies**, including:
+  - Rule-based baseline
+  - Fixed-safety ML controller
+  - Block-fixed controller
+  - Adaptive safety controller with feedback  
+- **Actuation realism**, enforcing brightness ramp limits and hysteresis consistent with commercial lighting drivers  
+- **Service-level evaluation**, reporting energy saving, blackout rate, and trade-off curves instead of prediction error alone
+
+---
+
+## Repository Structure
+
+```text
+notebooks/
+├── 01_data_engineering.ipynb
+│   Feature engineering and dataset preparation from battery telemetry
 │
-├── Data/
-│   ├── LED_151/                      # Raw and cleaned CSV data from each pole
-│   └── ...
+├── 02_model_training_rolling.ipynb
+│   Rolling-window model training and runtime forecasting
 │
-├── Notes/
-│   ├── Weekly_Objectives.md          # Planning & progress tracking
-│   └── Daily_Log.docx                # Detailed researcher notes
-│
-├── Paper/
-│   └── Drafts, citations, figures
-│
-├── Results/
-│   └── Power BI screenshots, graph
-│
-└── Simulations/
-    └── Experiment rotation matrix, fault scenarios
-```
-
----
-
-## 📍 Project Status
-
-- ✅ System folder structured in OneDrive  
-- ✅ Serial data logger functional and versioned  
-- ✅ Experiment plan and simulation tracker prepared  
-- ❎ Awaiting hardware access to begin live data logging  
-- ❎ Dashboard development (Looker Studio or Power BI)  
-- ❎ Battery health model and dimming optimization
-
----
-
-## 📌 Aiming for Publication
-
-This project is being conducted with the goal of producing a publishable scientific paper, with potential applications in:
-- Energy-efficient public lighting
-- AI-driven smart infrastructure
-- Industrial language model use cases
-
----
-
-## 📬 Contact
-
-For collaboration, replication, or questions:
-
-**Salaheddine Chouikh**  
-Email: [salaheddine.chouikh@mail.bcu.ac.uk]  
-GitHub: [github.com/Galuyoo](https://github.com/Galuyoo)
-LinkedIn: [linkedin.com/in/salaheddine-chouikh](https://linkedin.com/in/salaheddine-chouikh)
-
-**Industry Partner**
-Industry Partner: [Agamine Solar](https://agaminesolar.com)
+└── 03_ktp_pipeline_demo.ipynb
+    End-to-end demonstrator:
+    forecast → uncertainty calibration → control policies → actuation → KPIs
