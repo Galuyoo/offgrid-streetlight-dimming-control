@@ -17,6 +17,16 @@ REQUIRED_FILES = [
 ]
 
 FORBIDDEN_STRINGS = [
+    "MPC",
+    "mpc_phase",
+    "choose_mpc",
+    "PHASE_WEIGHTS",
+    "MPC_POLICY_NAME",
+    "Optimization-Based",
+    "optimization-based",
+    "greedy allocation",
+    "priority weight",
+    "phase weights",
     "/content/drive",
     "MyDrive",
     "drive.mount",
