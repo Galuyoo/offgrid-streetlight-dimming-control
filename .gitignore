@@ -38,3 +38,13 @@ review-response/
 *.docx
 *.pdf
 *.zip   
+# Manuscript and submission files
+paper/
+manuscript/
+drafts/
+submission/
+review-response/
+*.doc
+*.docx
+*.pdf
+*.zip
