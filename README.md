@@ -82,3 +82,18 @@ and writes outputs under:
 Small numerical differences may occur across environments due to package versions and stochastic model training. The notebook uses fixed split and model seeds for the reported repeated-run analyses where applicable.
 
 The archived notebooks are included for traceability but are not intended as the primary reproduction entry point.
+
+## Runtime modes
+
+The main notebook includes a `MODE` setting.
+
+- `light`: quick smoke test using fewer split/model seeds and a small RF grid.
+- `review_fast`: manuscript revision setting used for the repeated-run analyses reported in the reviewer response.
+
+For a quick check, use:
+
+`MODE = "light"`
+
+For manuscript-level reproduction, use:
+
+`MODE = "review_fast"`
