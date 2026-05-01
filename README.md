@@ -35,9 +35,9 @@ The archived notebooks in `archive/` preserve the original exploratory preproces
 
 - `notebooks/`  
   Cleaned public-facing notebooks:
-  - `01_data_exploration_preprocessing.ipynb` ? dataset checks and feature engineering
-  - `02_model_screening.ipynb` ? compact grouped model-screening analysis
-  - `03_reproduce_review_core_results.ipynb` ? main paper reproduction pipeline
+  - `01_data_exploration_preprocessing.ipynb` - dataset checks and feature engineering
+  - `02_model_screening.ipynb` - compact grouped model-screening analysis
+  - `03_reproduce_review_core_results.ipynb` - main paper reproduction pipeline
 
 - `data/raw/`  
   Place the downloaded NASA battery dataset here.
@@ -52,7 +52,7 @@ The archived notebooks in `archive/` preserve the original exploratory preproces
   Generated figures.
 
 - `outputs/review_validation/`  
-  Reviewer-validation outputs.
+  Supplementary validation outputs.
 
 - `configs/`  
   Reserved for paper configuration files.
