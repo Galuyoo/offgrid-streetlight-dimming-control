@@ -34,8 +34,10 @@ The archived notebooks in `archive/` preserve the original exploratory preproces
   Original research notebooks preserved for traceability.
 
 - `notebooks/`  
-  Contains the cleaned core reproduction notebook:  
-  `03_reproduce_review_core_results.ipynb`
+  Cleaned public-facing notebooks:
+  - `01_data_exploration_preprocessing.ipynb` ? dataset checks and feature engineering
+  - `02_model_screening.ipynb` ? compact grouped model-screening analysis
+  - `03_reproduce_review_core_results.ipynb` ? main paper reproduction pipeline
 
 - `data/raw/`  
   Place the downloaded NASA battery dataset here.
@@ -76,11 +78,16 @@ Create a Python environment and install the dependencies:
 
 `pip install -r requirements.txt`
 
-## Running the core reproduction notebook
+## Running the notebooks
 
-Open and run:
+The main paper reproduction entry point is:
 
 `notebooks/03_reproduce_review_core_results.ipynb`
+
+The two support notebooks provide preprocessing and model-screening context:
+
+- `notebooks/01_data_exploration_preprocessing.ipynb`
+- `notebooks/02_model_screening.ipynb`
 
 The notebook expects:
 
