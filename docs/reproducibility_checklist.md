@@ -21,8 +21,21 @@
 
 ## Runtime modes
 
-- `light`: quick local smoke test
-- `review_fast`: manuscript revision configuration for repeated-run analyses
+The main notebook includes a `MODE` setting with several runtime options:
+
+- `light`: quick smoke test using fewer split/model seeds and a small RF grid.
+- `review_fast`: manuscript revision setting used for the repeated-run analyses.
+- `medium`: includes optional CatBoost comparison with a moderate runtime.
+- `heavy_lite`: larger RF repeated-run setting without CatBoost.
+- `heavy`: extended validation setting with more split/model seeds and optional CatBoost.
+
+For a quick check, use:
+
+`MODE = "light"`
+
+For manuscript-level repeated-run reproduction, use:
+
+`MODE = "review_fast"`
 
 ## Expected generated outputs
 
