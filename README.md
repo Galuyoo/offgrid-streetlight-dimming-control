@@ -4,10 +4,10 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Status](https://img.shields.io/badge/status-research%20code-orange)
-![Reproducibility](https://img.shields.io/badge/reproducibility-paper%20pipeline-green)
+![Reproducibility](https://img.shields.io/badge/reproducibility-paper%20pipeline-brightgreen)
 ![Dataset](https://img.shields.io/badge/dataset-NASA%20Battery-lightgrey)
-![GitHub last commit](https://img.shields.io/github/last-commit/Galuyoo/offgrid-streetlight-dimming-control)
-![GitHub repo size](https://img.shields.io/github/repo-size/Galuyoo/offgrid-streetlight-dimming-control)
+![GitHub last commit](https://img.shields.io/github/last-commit/Galuyoo/offgrid-streetlight-dimming-control?color=brightgreen)
+![GitHub repo size](https://img.shields.io/github/repo-size/Galuyoo/offgrid-streetlight-dimming-control?color=blueviolet)
 ![Jupyter Notebook](https://img.shields.io/badge/notebooks-Jupyter-orange)
 ![scikit--learn](https://img.shields.io/badge/ML-scikit--learn-blue)
 
