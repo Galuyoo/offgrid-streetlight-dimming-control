@@ -1,5 +1,12 @@
 # Off-grid Streetlight Dimming Control
 
+[![Static repository checks](https://github.com/Galuyoo/offgrid-streetlight-dimming-control/actions/workflows/static-checks.yml/badge.svg)](https://github.com/Galuyoo/offgrid-streetlight-dimming-control/actions/workflows/static-checks.yml)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Status](https://img.shields.io/badge/status-research%20code-orange)
+![Reproducibility](https://img.shields.io/badge/reproducibility-core%20results-green)
+![Dataset](https://img.shields.io/badge/dataset-NASA%20Battery-lightgrey)
+
 This repository contains the reproducibility code for the paper:
 
 **Uncertainty aware Dimming Control for Off grid Solar Street Lighting: Feasibility Bounds and Blackout Severity Metrics**
