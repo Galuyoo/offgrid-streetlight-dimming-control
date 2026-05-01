@@ -1,67 +1,84 @@
-# Adaptive, Uncertainty-Aware Dimming Control for Off-Grid Solar Lighting
+# Off-grid Streetlight Dimming Control
 
-## Overview
+This repository contains the reproducibility code for the paper:
 
-This repository presents a **forecast-guided, uncertainty-aware dimming control pipeline** for **off-grid solar-powered street lighting systems**.  
-The work addresses a central challenge in autonomous public lighting: **maximising energy savings while avoiding night-time blackouts under uncertain battery conditions**.
+**Uncertainty aware Dimming Control for Off grid Solar Street Lighting: Feasibility Bounds and Blackout Severity Metrics**
 
-The proposed system combines:
-- Machine-learning–based **battery runtime forecasting**
-- **Conformal uncertainty calibration**
-- **Blackout-rate–aware control policies**
-- **Realistic actuation constraints** (ramp limits and hysteresis)
+The code reproduces the revised core analyses used in the manuscript and reviewer response, including:
 
-The pipeline is designed as a **research demonstrator with direct industrial relevance**, validated under deployment-like, time-aware evaluation protocols.
+- repeated-run feasibility estimates for Table 3
+- Section X confidence-interval tables
+- residual-buffer ablation
+- UM|BO p75/p90/p95 severity sensitivity analysis
 
----
+Figures 3--5 in the manuscript are retained as relaxed_oracle diagnostic figures. The main reproducibility notebook focuses on the additional repeated-run analyses introduced during revision.
 
-## Motivation
+## Repository structure
 
-Off-grid solar lighting systems operate under:
-- Finite and degrading battery capacity
-- Highly variable environmental conditions
-- Strict service reliability requirements (blackouts are unacceptable)
+- `archive/`  
+  Original research notebooks preserved for traceability.
 
-Conventional rule-based dimming strategies are either overly conservative or unsafe.  
-This work demonstrates how **calibrated uncertainty** can be translated into **safe, adaptive control decisions**, enabling significant energy savings without violating reliability constraints.
+- `notebooks/`  
+  Contains the cleaned core reproduction notebook:  
+  `03_reproduce_review_core_results.ipynb`
 
----
+- `data/raw/`  
+  Place the downloaded NASA battery dataset here.
 
-## Key Contributions
+- `data/processed/`  
+  Place or generate `engineered_metadata.csv` here.
 
-This repository demonstrates:
+- `outputs/tables/`  
+  Generated CSV tables.
 
-- **Rolling-window ML forecasting** of battery runtime from per-cycle voltage, current, and temperature features  
-- **Uncertainty-aware control** using conformal residual quantiles as safety buffers  
-- **Blackout-rate budgeting**, allowing operators to specify acceptable risk levels (e.g. ≤5%)  
-- **Multiple control policies**, including:
-  - Rule-based baseline
-  - Fixed-safety ML controller
-  - Block-fixed controller
-  - Adaptive safety controller with feedback  
-- **Actuation realism**, enforcing brightness ramp limits and hysteresis consistent with commercial lighting drivers  
-- **Service-level evaluation**, reporting energy saving, blackout rate, and trade-off curves instead of prediction error alone
+- `outputs/figures/`  
+  Generated figures.
 
----
+- `outputs/review_validation/`  
+  Reviewer-validation outputs.
 
-## Paper Draft
+- `configs/`  
+  Reserved for paper configuration files.
 
-A working preprint of the associated research paper is included in this repository.
-The manuscript is derived from an MSc dissertation and is currently being revised for
-submission to an IEEE journal.
+## Dataset
 
-The preprint is provided for transparency and research dissemination.
+The NASA battery dataset is not redistributed in this repository.
 
-## Repository Structure
+Download the dataset from the original source or Kaggle distribution:
 
-```text
-notebooks/
-├── 01_data_engineering.ipynb
-│   Feature engineering and dataset preparation from battery telemetry
-│
-├── 02_model_training_rolling.ipynb
-│   Rolling-window model training and runtime forecasting
-│
-└── 03_ktp_pipeline_demo.ipynb
-    End-to-end demonstrator:
-    forecast → uncertainty calibration → control policies → actuation → KPIs
+- NASA Ames Prognostics Center of Excellence battery dataset
+- Kaggle conversion: https://www.kaggle.com/datasets/patrickfleith/nasa-battery-dataset
+
+After preprocessing, the main pipeline expects:
+
+`data/processed/engineered_metadata.csv`
+
+See `data/README.md` for details.
+
+## Installation
+
+Create a Python environment and install the dependencies:
+
+`pip install -r requirements.txt`
+
+## Running the core reproduction notebook
+
+Open and run:
+
+`notebooks/03_reproduce_review_core_results.ipynb`
+
+The notebook expects:
+
+`data/processed/engineered_metadata.csv`
+
+and writes outputs under:
+
+- `outputs/tables/`
+- `outputs/figures/`
+- `outputs/review_validation/`
+
+## Notes on reproducibility
+
+Small numerical differences may occur across environments due to package versions and stochastic model training. The notebook uses fixed split and model seeds for the reported repeated-run analyses where applicable.
+
+The archived notebooks are included for traceability but are not intended as the primary reproduction entry point.
