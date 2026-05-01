@@ -8,11 +8,14 @@ __pycache__/
 venv/
 env/
 
-# Local data
+# Local raw data
 data/raw/*
 !data/raw/.gitkeep
+
+# Processed data
 data/processed/*
 !data/processed/.gitkeep
+!data/processed/engineered_metadata.csv
 
 # Generated outputs
 outputs/tables/*
