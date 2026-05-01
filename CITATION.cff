@@ -1,9 +1,9 @@
-﻿cff-version: 1.2.0
+cff-version: 1.2.0
 message: "If you use this repository, please cite the associated paper."
 title: "Off-grid Streetlight Dimming Control"
 authors:
-  - family-names: "Gank"
-    given-names: "Galuyoo"
+  - family-names: "Chouikh"
+    given-names: "Salaheddine"
 repository-code: "https://github.com/Galuyoo/offgrid-streetlight-dimming-control"
 date-released: 2026-05-01
 license: MIT
