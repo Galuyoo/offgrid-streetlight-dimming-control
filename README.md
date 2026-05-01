@@ -4,21 +4,29 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Status](https://img.shields.io/badge/status-research%20code-orange)
-![Reproducibility](https://img.shields.io/badge/reproducibility-core%20results-green)
+![Reproducibility](https://img.shields.io/badge/reproducibility-paper%20pipeline-green)
 ![Dataset](https://img.shields.io/badge/dataset-NASA%20Battery-lightgrey)
 
-This repository contains the reproducibility code for the paper:
+This repository contains the reproducibility code and supporting research notebooks for the paper:
 
 **Uncertainty aware Dimming Control for Off grid Solar Street Lighting: Feasibility Bounds and Blackout Severity Metrics**
 
-The code reproduces the revised core analyses used in the manuscript and reviewer response, including:
+The repository provides the processed battery-cycle feature table, archived exploratory notebooks, and a cleaned reproduction notebook for the main simulation pipeline. The code covers the core methodological components used in the paper:
 
-- repeated-run feasibility estimates for Table 3
-- Section X confidence-interval tables
-- residual-buffer ablation
-- UM|BO p75/p90/p95 severity sensitivity analysis
+- grouped battery-level train/test splitting
+- Random Forest runtime forecasting
+- residual-quantile uncertainty buffering
+- phase-specific dimming policy simulation
+- feasibility-bound estimation under brightness floors
+- blackout rate, energy saving, and UM|BO severity metrics
+- repeated-run confidence-interval analysis
+- buffer ablation and severity-percentile sensitivity checks
 
-Figures 3--5 in the manuscript are retained as relaxed_oracle diagnostic figures. The main reproducibility notebook focuses on the additional repeated-run analyses introduced during revision.
+The main entry point is:
+
+`notebooks/03_reproduce_review_core_results.ipynb`
+
+The archived notebooks in `archive/` preserve the original exploratory preprocessing, model-screening, and full pipeline development history. They are included for traceability, while the cleaned notebook is the recommended reproducibility entry point.
 
 ## Repository structure
 
