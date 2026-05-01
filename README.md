@@ -6,6 +6,10 @@
 ![Status](https://img.shields.io/badge/status-research%20code-orange)
 ![Reproducibility](https://img.shields.io/badge/reproducibility-paper%20pipeline-green)
 ![Dataset](https://img.shields.io/badge/dataset-NASA%20Battery-lightgrey)
+![GitHub last commit](https://img.shields.io/github/last-commit/Galuyoo/offgrid-streetlight-dimming-control)
+![GitHub repo size](https://img.shields.io/github/repo-size/Galuyoo/offgrid-streetlight-dimming-control)
+![Jupyter Notebook](https://img.shields.io/badge/notebooks-Jupyter-orange)
+![scikit--learn](https://img.shields.io/badge/ML-scikit--learn-blue)
 
 This repository contains the reproducibility code and supporting research notebooks for the paper:
 
