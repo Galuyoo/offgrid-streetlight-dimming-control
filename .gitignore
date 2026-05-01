@@ -43,3 +43,9 @@ review-response/
 .DS_Store
 .vscode/
 .idea/
+
+# Windows metadata
+desktop.ini
+
+# Do not store data in notebooks folder
+notebooks/*.csv
