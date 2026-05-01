@@ -48,3 +48,7 @@ review-response/
 *.docx
 *.pdf
 *.zip
+
+# Notebook run outputs
+notebooks/trade_master.csv
+outputs/review_validation/*
