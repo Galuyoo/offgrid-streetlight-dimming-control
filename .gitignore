@@ -27,3 +27,14 @@ outputs/figures/*
 .DS_Store
 .vscode/
 .idea/
+
+# Manuscript and submission files
+manuscript/
+paper/
+drafts/
+submission/
+review-response/
+*.doc
+*.docx
+*.pdf
+*.zip   
