@@ -1,4 +1,4 @@
-# Python
+﻿# Python
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
@@ -22,22 +22,12 @@ outputs/tables/*
 !outputs/tables/.gitkeep
 outputs/figures/*
 !outputs/figures/.gitkeep
+outputs/review_validation/*
+!outputs/review_validation/.gitkeep
 
-# OS / editor
-.DS_Store
-.vscode/
-.idea/
+# Notebook run outputs
+notebooks/trade_master.csv
 
-# Manuscript and submission files
-manuscript/
-paper/
-drafts/
-submission/
-review-response/
-*.doc
-*.docx
-*.pdf
-*.zip   
 # Manuscript and submission files
 paper/
 manuscript/
@@ -49,6 +39,7 @@ review-response/
 *.pdf
 *.zip
 
-# Notebook run outputs
-notebooks/trade_master.csv
-outputs/review_validation/*
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
