@@ -104,8 +104,6 @@ and writes outputs under:
 
 Small numerical differences may occur across environments due to package versions and stochastic model training. The notebook uses fixed split and model seeds for the reported repeated-run analyses where applicable.
 
-The archived notebooks are included for traceability but are not intended as the primary reproduction entry point.
-
 ## Runtime modes
 
 The main notebook includes a `MODE` setting with several runtime options:
