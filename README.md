@@ -15,7 +15,7 @@ This repository contains the reproducibility code and supporting research notebo
 
 **Uncertainty aware Dimming Control for Off grid Solar Street Lighting: Feasibility Bounds and Blackout Severity Metrics**
 
-The repository provides the processed battery-cycle feature table, archived exploratory notebooks, and a cleaned reproduction notebook for the main simulation pipeline. The code covers the core methodological components used in the paper:
+The repository provides the processed battery-cycle feature table, and a cleaned reproduction notebook for the main simulation pipeline. The code covers the core methodological components used in the paper:
 
 - grouped battery-level train/test splitting
 - Random Forest runtime forecasting
@@ -30,12 +30,9 @@ The main entry point is:
 
 `notebooks/03_reproduce_review_core_results.ipynb`
 
-The archived notebooks in `archive/` preserve the original exploratory preprocessing, model-screening, and full pipeline development history. They are included for traceability, while the cleaned notebook is the recommended reproducibility entry point.
+The cleaned notebooks in `notebooks/` are the recommended reproducibility entry points.
 
 ## Repository structure
-
-- `archive/`  
-  Original research notebooks preserved for traceability.
 
 - `notebooks/`  
   Cleaned public-facing notebooks:
